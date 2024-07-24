@@ -1,3 +1,4 @@
+FROM ubuntu
 WORKDIR /app
 
 # Copy requirements.txt and devops directory to /app in the container
