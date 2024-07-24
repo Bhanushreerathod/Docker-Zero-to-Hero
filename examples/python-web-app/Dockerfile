@@ -2,8 +2,8 @@ FROM ubuntu
 WORKDIR /app
 
 # Copy requirements.txt and devops directory to /app in the container
-COPY requirements.txt /app/devops
-COPY devops /app/devops
+COPY requirements.txt /app
+COPY devops /app
 
 
 # Update apt-get and install Python 3 and pip
