@@ -11,7 +11,7 @@ RUN apt-get update && \
     apt-get install -y python3 python3-pip
 
 # Install Python packages from requirements.txt
-RUN pip install -r requirements.txt -v
+RUN pip install -r requirements.txt 
 
 # Change directory to /app/devops (assuming this is necessary for your application)
 WORKDIR /app/devops
