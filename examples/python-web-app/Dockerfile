@@ -5,12 +5,13 @@ WORKDIR /app
 COPY requirements.txt /app
 COPY devops /app/devops
 
+
 # Update apt-get and install Python 3 and pip
 RUN apt-get update && \
     apt-get install -y python3 python3-pip
-
+RUN python3 -m pip install --upgrade pip
 # Install Python packages from requirements.txt
-RUN pip install -r requirements.txt
+RUN pip install -r requirements.txt -v
 
 # Change directory to /app/devops (assuming this is necessary for your application)
 WORKDIR /app/devops
